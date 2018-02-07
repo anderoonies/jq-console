@@ -4,7 +4,7 @@ Licensed under the MIT license
 ###
 
 # Shorthand for jQuery.
-$ = jQuery
+$ = require('jquery')
 
 # The states in which the console can be.
 STATE_INPUT = 0
