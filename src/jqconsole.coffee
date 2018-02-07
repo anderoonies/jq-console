@@ -1369,8 +1369,12 @@ class JQConsole
     # is already extracted and has been put on the left of the prompt.
     @$composition.detach()
 
-$.fn.jqconsole = (header, prompt_main, prompt_continue, disable_auto_focus) ->
-  new JQConsole this, header, prompt_main, prompt_continue, disable_auto_focus
+module.exports = {
+    jqconsole: (container, header, prompt_main, prompt_continue, disable_auto_focus) ->
+      new JQConsole container, header, prompt_main, prompt_continue, disable_auto_focus
+}
 
-$.fn.jqconsole.JQConsole = JQConsole
-$.fn.jqconsole.Ansi = Ansi
+# $.fn.jqconsole =
+#
+# $.fn.jqconsole.JQConsole = JQConsole
+# $.fn.jqconsole.Ansi = Ansi
